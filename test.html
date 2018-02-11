@@ -4,11 +4,17 @@
         <title>lodash source review</title>
     </head>
     <body>
-        <script src="dropRight.js"></script>
+        <script src="flatten.js"></script>
         <script src="lodash.js"></script>
         <script>
-        var arr = [0, 1, false, 2, '', 3];
-        console.log('test:',dropRight(arr,'qq'));
+        //var arr = [0, 1, false, 2, '', 3];
+        var  users = [
+            { 'user': 'fred',    'active': true },
+            { 'user': 'barney',  'active': false },
+            { 'user': 'fred',    'active': true },
+            { 'user': 'pebbles', 'active': true }
+            ]
+        console.log('test:',flatten([1, [2, [3, [4]], 5]]));
         </script>
     </body>
 </html>
