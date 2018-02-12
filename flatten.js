@@ -18,7 +18,7 @@
          return [];
      }
      const length =  arr.length;
-     var res = [];
+     const res = [];
      for(const value of arr) {
         res.push(...(typeof value == 'object'? value : [value]))
      }
