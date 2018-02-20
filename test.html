@@ -4,7 +4,7 @@
         <title>lodash source review</title>
     </head>
     <body>
-        <script src="join.js"></script>
+        <script src="intersection.js"></script>
         <script src="lodash.js"></script>
         <script>
         //var arr = [0, 1, false, 2, '', 3];
@@ -14,7 +14,8 @@
             { 'user': 'fred',    'active': true },
             { 'user': 'pebbles', 'active': true }
             ]
-        console.log('test:',join(['a', 'b', 'c'], '~'));
+        var arr = [[,1,2],[2,3],[123,1,2,3]]
+        console.log('test:',intersection([,1,2],[2,3],[123,1,2,3]));
         </script>
     </body>
 </html>
