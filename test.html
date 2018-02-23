@@ -4,7 +4,7 @@
         <title>lodash source review</title>
     </head>
     <body>
-        <script src="intersection.js"></script>
+        <script src="lastIndexOf.js"></script>
         <script src="lodash.js"></script>
         <script>
         //var arr = [0, 1, false, 2, '', 3];
@@ -14,8 +14,8 @@
             { 'user': 'fred',    'active': true },
             { 'user': 'pebbles', 'active': true }
             ]
-        var arr = [[,1,2],[2,3],[123,1,2,3]]
-        console.log('test:',intersection([,1,2],[2,3],[123,1,2,3]));
+        var arr = [123,1,2,3,2];
+        console.log('test:',lastIndexOf(arr,2,3));
         </script>
     </body>
 </html>

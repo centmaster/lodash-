@@ -21,14 +21,33 @@
      if(arrs.length == 1) {
          return arrs[0];
      }
-     const temp = [];
+     const map = new Map();
+     const res = [];
+     const length = arrs.length;
      for(let i=0;i<arrs.length;i++) {
-         for(let j=0;j<arrs[i].length;j++) {
-                temp[arrs[i][j]] = temp[arrs[i][j]]++ || 0;
+         for(let j=0;j<arrs[i].length;j++) {  
+                let temp = map.get(arrs[i][j]);
+                if(map.has(arrs[i][j])){
+                    map.set(arrs[i][j],++temp);
+                }else{
+                    map.set(arrs[i][j],1);
+                }
          }
      }
-     temp.filter((ele)=>{
-         return temp[ele] == arrs.length;
+     map.forEach((ele,index)=> {
+         if(ele == length) {
+             res.push(index);
+         }
      })
-     return temp;
+     const testmap = new Map(arrs);
+     console.log('testmap',testmap,testmap[0],testmap.length)
+     return res;
  }
+
+
+
+ /**
+  * 1.首先发现map可以自己count出现次数
+  * 2.人家基本都是一个功能封装成一个函数耦合度比较低
+  * 3.我表示有些东西没理解，这个intersection回头再看下
+  */
